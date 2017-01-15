@@ -14,10 +14,4 @@ class Author
     public $firstname;
     public $lastname;
 
-    public static function getLatest() {
-        $db = new Db();
-        $sql = 'SELECT * FROM ' . self::$table . ' LIMIT 3';
-        return $db->query($sql, [], self::class);
-    }
-
 }

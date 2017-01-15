@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/autoload.php';
 
 /*При вызове метода незнакомого класса запускается функция __autoload
@@ -9,9 +8,9 @@ require __DIR__ . '/autoload.php';
 //$data = \App\Models\Article::findAll();
 //$data = new \App\Models\Article;
 //$data = new \App\Models\Author;
-
-$data = \App\Models\Article::findById(1);
-var_dump($data);
-
-//$data = \App\Models\Author::getLatest();
+//echo '<pre>';
+//$data = \App\Models\Article::findById(1);
 //var_dump($data);
+//echo '<br>';
+$news = \App\Models\Article::getLatest(4);
+include __DIR__ . '/NewsTemplate.php';
